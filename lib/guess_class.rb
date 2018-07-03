@@ -1,4 +1,3 @@
-
 class Guess
 
 attr_reader :response, :card
@@ -9,22 +8,21 @@ attr_reader :response, :card
   end
 
   def correct?
-    if response == "#{value} of #{suit}"
-      puts  true
+    if @response == "#{@card.value} of #{@card.suit}"
+      return true
     else
-      puts  false
+      return false
+    end
   end
 
-  def feedback
+  def give_feedback
     if correct? == true
-      "Correct!"
+     "Correct!"
     else
-      "Incorrect!"
+     "Incorrect!"
     end
   end
 end
-end
-
-# puts guess_1 = Guess.new("Ace of Spades", card_1)
-# p guess_1.correct?
-# p guess_1.feedback
+#card_1 = Card.new("king","Hearts")
+ #puts guess_1 = Guess.new("Ace of Spades", card_1)
+#puts guess_1.correct?
