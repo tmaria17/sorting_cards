@@ -7,9 +7,6 @@ attr_reader :value, :suit
     @value = value
     @suit = suit
   end
-
-
-
 end
 
 # card_1 = Card.new("Ace", "Spades")
