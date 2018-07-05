@@ -1,3 +1,4 @@
+require './lib/card_class.rb'
 class Guess
 
 attr_reader :response, :card
@@ -5,6 +6,9 @@ attr_reader :response, :card
   def initialize (response, card)
     @response = response
     @card = card
+  end
+  def response
+    @response
   end
 
   def correct?
@@ -23,6 +27,3 @@ attr_reader :response, :card
     end
   end
 end
-#card_1 = Card.new("king","Hearts")
- #puts guess_1 = Guess.new("Ace of Spades", card_1)
-#puts guess_1.correct?
